@@ -1,6 +1,6 @@
 .header-section{
     height: 85px;
-    background-color: #06053e;
+    background-color: #03022c;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,13 +14,17 @@
 .header-section a{
     color: white;
     text-decoration: none;
-    margin-left: 26px;
+    padding-left: 55px;
     font-size: 18px;
   
 }
 
 .header-section a:hover{
-    color: orange;
+    color: #0e9eff;
+    
+   
+    
+    
 }
 
 
