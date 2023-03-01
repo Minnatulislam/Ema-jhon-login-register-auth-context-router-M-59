@@ -1,0 +1,23 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+}
+
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 100px 100px;
+}
+
+
+.sidebar-container{
+    background-color: #053454;
+    color: white;
+    padding: 0px 50px;
+   
+}
+.sidebar-container a{
+   text-decoration: none;
+}
