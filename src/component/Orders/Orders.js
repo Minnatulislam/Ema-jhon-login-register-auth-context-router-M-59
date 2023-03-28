@@ -5,7 +5,7 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 
 const Orders = () => {
-    const {products, initialCart} = useLoaderData();
+    const { products, initialCart } = useLoaderData();
     const [cart, setCart] = useState(initialCart)
 
 
@@ -15,7 +15,7 @@ const Orders = () => {
         removeFromDb(id);
     }
 
-    const clearCart = () =>{
+    const clearCart = () => {
         setCart([]);
         deleteShoppingCart();
     }
@@ -23,25 +23,29 @@ const Orders = () => {
 
     return (
         <div className='shop-container'>
-           <div className="orders-container">
+            <div className="orders-container">
                 {
                     cart.map(product => <ReviewItem
-                            key = {product.id}
-                            product = {product}
-                            removeItemHandle = {removeItemHandle}
-                        ></ReviewItem>)
+                        key={product.id}
+                        product={product}
+                        removeItemHandle={removeItemHandle}
+                    ></ReviewItem>)
                 }
 
                 {
-                    cart.length === 0 && <h2 style={{margin : '50px 200px'}}>No Items for Review. Please <Link to="/">Shop more</Link></h2>
+                    cart.length === 0 && <h2 style={{ margin: '50px 200px' }}>No Items for Review. Please <Link to="/">Shop more</Link></h2>
                 }
-           </div>
-           <div className="sidebar-container">
-                <Cart 
-                cart = {cart}
-                clearCart ={clearCart}
-                ></Cart>
-           </div>
+            </div>
+            <div className="sidebar-container">
+                <Cart
+                    cart={cart}
+                    clearCart={clearCart}
+                >
+                    <Link to='/shipping'>
+                        <button>Proceed Shipping</button>
+                    </Link>
+                </Cart>
+            </div>
         </div>
     );
 };

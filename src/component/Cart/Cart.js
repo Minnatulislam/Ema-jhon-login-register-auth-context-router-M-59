@@ -26,10 +26,10 @@ const Cart = ({cart, clearCart, children}) => {
             <p>Total Shipping Charge : ${shipping}</p>
             <p>Tax : ${tax}</p>
             <h4>Grand Total : {grandTotal}</h4>
-            <button onClick={clearCart} className="clear-btn" >
+            {/* <button onClick={clearCart} className="clear-btn" >
                 <p>Clear Cart</p>
                 <FontAwesomeIcon  icon = {faTrashAlt}></FontAwesomeIcon>
-            </button>
+            </button> */}
             
             {children}
         </div>

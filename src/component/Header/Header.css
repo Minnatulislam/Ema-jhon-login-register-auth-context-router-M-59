@@ -20,12 +20,26 @@
 }
 
 .header-section a:hover{
-    color: #0e9eff;
-    
-   
-    
-    
+    color: #0e9eff;   
 }
+
+.btn-logout{
+    color: rgb(255, 255, 255);
+    background-color: #058eea;
+    margin-left: 55px;
+    padding: 8px 15px;
+    border: 0px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.btn-logout:hover{
+    color: rgb(252, 252, 252);
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #0573bd;
+}
+   
 
 
 

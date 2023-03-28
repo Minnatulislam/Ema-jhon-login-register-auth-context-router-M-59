@@ -6,9 +6,11 @@ import About from './component/About/About';
 import Shop from './component/Shop/Shop';
 import Orders from './component/Orders/Orders';
 import Inventory from './component/Inventory/Inventory';
+import Shipping from './component/Shipping/Shipping';
 import { productsAndCartloader } from './loaders/productsAndCartloader';
 import Login from './component/Login/Login';
 import SignUp from './component/SignUp/SignUp';
+import PrivateRoute from './component/routes/PrivateRoute';
 
 function App() {
 
@@ -30,6 +32,10 @@ function App() {
           {
             path:'/inventory',
             element: <Inventory></Inventory>
+          },
+          {
+            path:'/shipping',
+            element: <PrivateRoute><Shipping></Shipping></PrivateRoute>
           },
           {
             path:'/about',
